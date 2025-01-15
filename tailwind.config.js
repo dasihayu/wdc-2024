@@ -1,7 +1,14 @@
+import fluid, { extract, fontSize, screens } from "fluid-tailwind";
+
 /** @type {import('tailwindcss').Config} */
 export default {
-	content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+	content: {
+		files: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+		extract,
+	},
 	theme: {
+		screens,
+		fontSize,
 		extend: {
 			colors: {
 				primary: "#2C2C2C",
@@ -13,5 +20,5 @@ export default {
 			},
 		},
 	},
-	plugins: [],
+	plugins: [fluid],
 };
