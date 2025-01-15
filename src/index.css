@@ -2,8 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-.body-large-bold {
-  font-size: 1rem;
+.h5 {
+  font-size: 1.5rem;
+  font-style: normal;
   font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -0.03rem;
+}
+
+.description {
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: -0.015rem;
+}
+
+.body-larger {
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
   line-height: 125%;
+  letter-spacing: 0.04rem;
 }

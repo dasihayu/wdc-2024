@@ -1,35 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+export default function App() {
+	return (
+		<div
+			className="w-full h-screen text-neutral px-9 py-14 flex flex-col justify-end text-center"
+			style={{ backgroundImage: `url('/main-page.jpg')` }}
+		>
+			<h1 className="text-4xl font-bold h5">
+				Lindungi Bumi, Mulai dari Langkah Kecil Anda!
+			</h1>
+			<p className="pt-4 pb-6 description">
+				Laporkan isu lingkungan, edukasi diri, dan bergabung dalam komunitas
+				peduli lingkungan.
+			</p>
+			<button type="button" className="py-2 bg-primary rounded-lg w-full">
+				Mulai
+			</button>
+		</div>
+	);
 }
-
-export default App
