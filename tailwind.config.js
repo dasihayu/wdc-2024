@@ -11,7 +11,7 @@ export default {
 		fontSize,
 		extend: {
 			colors: {
-				primary: "#2C2C2C",
+				primary: "#0B894A",
 				secondary: "#0B894A",
 				neutral: {
 					primary: "#EDEDED",
@@ -22,7 +22,10 @@ export default {
 				error: "#D06253",
 				green: {
 					secondary: "#1E9C5D",
+					border: "#8BB69B",
 				},
+				grey: "#757575",
+				black: "#2C2C2C",
 			},
 		},
 	},
