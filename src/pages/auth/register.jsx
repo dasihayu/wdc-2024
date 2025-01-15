@@ -3,11 +3,11 @@ import ThemedButton from "../../components/ThemedButton.jsx";
 
 export default function RegisterPage() {
 	return (
-		<div className="flex flex-col w-full min-h-screen bg-primary">
+		<main className="flex flex-col w-full min-h-screen bg-primary">
 			<h1 className="text-center py-9 text-neutral-secondary h1 px-9">
 				Selamat datang Pasukan Kebersihan
 			</h1>
-			<div className="flex-1 p-12 bg-white rounded-t-3xl">
+			<section className="flex-1 p-12 bg-white rounded-t-3xl">
 				<ThemedButton src="/google.png" alt="Google Icon" type="secondary">
 					Daftar dengan Google
 				</ThemedButton>
@@ -54,7 +54,7 @@ export default function RegisterPage() {
 						</p>
 					</div>
 				</form>
-			</div>
-		</div>
+			</section>
+		</main>
 	);
 }
