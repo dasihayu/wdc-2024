@@ -1,10 +1,16 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
+import { createRoot } from "react-dom/client";
+import App from "./pages/App.jsx";
 import "./index.css";
+import { BrowserRouter, Route, Routes } from "react-router";
+import LandingPage from "./pages/landing-page.jsx";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-	<React.StrictMode>
-		<App />
-	</React.StrictMode>,
+const root = document.getElementById("root");
+
+createRoot(root).render(
+	<BrowserRouter>
+		<Routes>
+			<Route path="/" element={<App />} />
+			<Route path="/landing-page" element={<LandingPage />} />
+		</Routes>
+	</BrowserRouter>,
 );
