@@ -2,7 +2,7 @@
 
 SABUK (Sahabat Bumi Kita) merupakan website untuk kejuaraan ITC 2025 yang diselengarakan oleh Himpunan Mahasiswa Teknik Informatika UDINUS, dengan membawa tema “Public Service and Communities”.
 
-![Logo SABUK](/public/logo.png)
+![Logo SABUK](/public/Logo.png)
 
 ## Authors
 

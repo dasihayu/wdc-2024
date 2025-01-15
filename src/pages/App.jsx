@@ -1,7 +1,7 @@
 export default function App() {
 	return (
 		<div
-			className="w-full h-screen text-neutral px-9 py-14 flex flex-col justify-end text-center"
+			className="w-full h-screen text-neutral-primary px-9 py-14 flex flex-col justify-end text-center"
 			style={{ backgroundImage: `url('/main-page.jpg')` }}
 		>
 			<h1 className="text-4xl font-bold h5">

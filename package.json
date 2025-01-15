@@ -9,6 +9,7 @@
 		"preview": "vite preview"
 	},
 	"dependencies": {
+		"hamburger-react": "^2.5.2",
 		"react": "^19.0.0",
 		"react-dom": "^19.0.0",
 		"react-router": "^7.1.1"
