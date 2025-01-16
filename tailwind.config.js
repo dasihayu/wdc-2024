@@ -25,6 +25,7 @@ export default {
 					border: "#8BB69B",
 				},
 				grey: "#757575",
+				"grey-border": "#D9D9D9",
 				black: "#2C2C2C",
 			},
 		},
