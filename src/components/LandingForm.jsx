@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import LocationPicker from "./LocationPicker";
 
 function LandingForm() {
@@ -9,13 +8,11 @@ function LandingForm() {
   const handleLocationSelect = (coords) => {
     setLocation(coords);
   };
+
   return (
-    <div>
-      <form
-        action=""
-        className="flex flex-col justify-center items-center shadow-md rounded-lg p-6 gap-6"
-      >
-        <div className="flex flex-col gap-1">
+    <div className="w-full max-w-2xl mx-auto">
+      <form className="flex flex-col justify-center items-center shadow-md rounded-lg p-6 md:p-8 gap-6">
+        <div className="flex flex-col w-full max-w-md gap-2">
           <label htmlFor="name" className="font-semibold">
             Nama
           </label>
@@ -23,10 +20,11 @@ function LandingForm() {
             type="text"
             placeholder="Nama lengkap"
             name="name"
-            className="border border-secondary rounded-lg px-3 py-1 w-64 focus:outline-none"
+            className="border border-secondary rounded-lg px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-secondary/50 transition-all"
           />
         </div>
-        <div className="flex flex-col gap-1">
+        
+        <div className="flex flex-col w-full max-w-md gap-2">
           <label htmlFor="isu" className="font-semibold">
             Laporkan Isu
           </label>
@@ -34,23 +32,24 @@ function LandingForm() {
             type="text"
             placeholder="Isu yang ingin dilaporkan"
             name="isu"
-            className="border border-secondary rounded-lg px-3 py-1 w-64 focus:outline-none"
+            className="border border-secondary rounded-lg px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-secondary/50 transition-all"
           />
         </div>
-        <div className="flex flex-col gap-1">
+
+        <div className="flex flex-col w-full max-w-md gap-2">
           <label htmlFor="fileInput" className="font-semibold">
             Unggah Foto
           </label>
-          <div className="relative w-64">
+          <div className="relative w-full">
             <button
               type="button"
-              className="flex items-center gap-2 border border-secondary rounded-lg px-3 py-1 w-full text-left text-gray-500 focus:outline-none text-sm"
+              className="flex items-center gap-3 border border-secondary rounded-lg px-4 py-2 w-full text-left text-gray-500 focus:outline-none focus:ring-2 focus:ring-secondary/50 transition-all"
               onClick={() => document.getElementById("fileInput").click()}
             >
-              <p className="text-sm bg-[#D9D9D9] py-1 px-3 rounded-md">
+              <span className="text-sm bg-[#D9D9D9] py-1.5 px-4 rounded-md">
                 Cari..
-              </p>{" "}
-              {fileName}
+              </span>
+              <span className="truncate">{fileName}</span>
             </button>
             <input
               id="fileInput"
@@ -66,23 +65,27 @@ function LandingForm() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col w-full max-w-md gap-2">
           <label htmlFor="description" className="font-semibold">
             Deskripsi
           </label>
           <textarea
             placeholder="Deskripsikan isu"
-            name="descriprtion"
-            className="border border-secondary rounded-lg px-3 py-1 h-32 w-64 focus:outline-none"
+            name="description"
+            className="border border-secondary rounded-lg px-4 py-2 h-32 w-full focus:outline-none focus:ring-2 focus:ring-secondary/50 transition-all resize-none"
           />
         </div>
-        <div className="flex flex-col gap-1">
+
+        <div className="flex flex-col w-full max-w-md gap-2">
           <label htmlFor="lokasi" className="font-semibold">
             Lokasi
           </label>
-          <LocationPicker onLocationSelect={handleLocationSelect} />
+          <div className="w-full">
+            <LocationPicker onLocationSelect={handleLocationSelect} />
+          </div>
         </div>
-        <button className="bg-secondary mx-auto items-center text-base w-full text-white rounded-lg py-2">
+
+        <button className="bg-secondary w-full max-w-md text-white rounded-lg py-3 hover:bg-secondary/90 transition-colors text-base font-medium">
           Buat Laporan
         </button>
       </form>

@@ -13,38 +13,51 @@ const recommendedTopics = [
 
 function ChatBot() {
   return (
-    <div>
-      <div className="bg-[#EDEDED] flex items-center flex-col justify-center p-6 mt-6 rounded-lg gap-4 max-w-80">
-        <div className="flex flex-row justify-between gap-2">
-          <img src="/sparkling-line.svg" alt="" />
-          <h1 className="font-medium text-base text-black">Apa yang ingin kamu ketahui?</h1>
+    <div className="w-full max-w-2xl mx-auto">
+      <div className="bg-[#EDEDED] flex items-center flex-col justify-center p-6 md:p-8 mt-6 rounded-lg gap-4">
+        <div className="flex flex-row justify-between items-center gap-3 w-full max-w-lg">
+          <img src="/sparkling-line.svg" alt="" className="w-6 h-6" />
+          <h1 className="font-medium text-lg text-black flex-grow text-center">
+            Apa yang ingin kamu ketahui?
+          </h1>
+          <img src="/sparkling-line.svg" alt="" className="w-6 h-6" />
         </div>
         
-        <div className="flex flex-row justify-between gap-2 w-full bg-white border border-[#D9D9D9] rounded-3xl py-2 px-4">
+        <div className="flex flex-row justify-between gap-2 w-full max-w-lg bg-white border border-[#D9D9D9] rounded-3xl py-2.5 px-4 hover:border-secondary transition-colors">
           <input 
             type="text" 
             placeholder="Tanya Apapun tentang Lingkungan!" 
             className="text-sm w-full focus:outline-none text-black" 
           />
-          <img src="/Search.svg" alt="" />
+          <img src="/Search.svg" alt="" className="w-5 h-5" />
         </div>
         
-        <p className="text-black text-xs">Rekomendasi topik</p>
-        
-        <div className="w-full">
+        <div className="w-full max-w-lg">
+          <p className="text-black text-sm mb-2">Rekomendasi topik</p>
+          
           <Swiper
             slidesPerView="auto"
             spaceBetween={8}
             className="w-full"
+            breakpoints={{
+              640: {
+                slidesPerView: 3,
+                spaceBetween: 12,
+              },
+              768: {
+                slidesPerView: 4,
+                spaceBetween: 16,
+              }
+            }}
           >
             {recommendedTopics.map((topic, index) => (
               <SwiperSlide 
                 key={index}
                 className="!w-auto"
               >
-                <p className="text-black text-xs bg-white rounded-full p-2 whitespace-nowrap">
+                <button className="text-black text-sm bg-white rounded-full py-2 px-4 hover:bg-secondary/10 transition-colors whitespace-nowrap">
                   {topic}
-                </p>
+                </button>
               </SwiperSlide>
             ))}
           </Swiper>
