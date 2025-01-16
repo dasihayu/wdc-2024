@@ -33,3 +33,17 @@
   line-height: 120%;
   letter-spacing: -0.025rem;
 }
+
+
+.my-masonry-grid {
+  display: flex;
+  margin-left: -15px; /* Adjust gap between columns */
+  width: auto;
+}
+.my-masonry-grid_column {
+  padding-left: 15px; /* Adjust gap between items */
+  background-clip: padding-box;
+}
+.my-masonry-grid_column > div {
+  margin-bottom: 15px; /* Adjust gap between rows */
+}
