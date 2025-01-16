@@ -9,6 +9,11 @@
 		"preview": "vite preview"
 	},
 	"dependencies": {
+		"@fortawesome/fontawesome-svg-core": "^6.7.2",
+		"@fortawesome/free-brands-svg-icons": "^6.7.2",
+		"@fortawesome/free-regular-svg-icons": "^6.7.2",
+		"@fortawesome/free-solid-svg-icons": "^6.7.2",
+		"@fortawesome/react-fontawesome": "^0.2.2",
 		"clsx": "^2.1.1",
 		"@fortawesome/fontawesome-svg-core": "^6.7.2",
 		"@fortawesome/free-brands-svg-icons": "^6.7.2",
@@ -16,6 +21,8 @@
 		"@fortawesome/free-solid-svg-icons": "^6.7.2",
 		"@fortawesome/react-fontawesome": "^0.2.2",
 		"hamburger-react": "^2.5.2",
+		"leaflet": "^1.9.4",
+		"leaflet-geosearch": "^4.0.0",
 		"prop-types": "^15.8.1",
 		"leaflet": "^1.9.4",
 		"leaflet-geosearch": "^4.0.0",

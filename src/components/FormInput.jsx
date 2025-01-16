@@ -27,11 +27,7 @@ export default function FormInput({
 						className="absolute -translate-y-1/2 right-3 top-1/2"
 					>
 						<img
-							src={
-								showPassword === true
-									? "/public/eye.svg"
-									: "/public/eye-off.svg"
-							}
+							src={showPassword === true ? "/eye.svg" : "/eye-off.svg"}
 							alt="Toggle password visibility"
 						/>
 					</button>
