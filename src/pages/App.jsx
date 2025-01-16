@@ -1,7 +1,11 @@
+import { useNavigate } from "react-router";
+
 export default function App() {
+	const navigate = useNavigate();
+
 	return (
 		<div
-			className="w-full h-screen text-neutral-primary px-9 py-14 flex flex-col justify-end text-center"
+			className="flex flex-col justify-end w-full h-screen text-center text-neutral-primary px-9 py-14"
 			style={{ backgroundImage: `url('/main-page.jpg')` }}
 		>
 			<h1 className="text-4xl font-bold h5">
@@ -11,7 +15,11 @@ export default function App() {
 				Laporkan isu lingkungan, edukasi diri, dan bergabung dalam komunitas
 				peduli lingkungan.
 			</p>
-			<button type="button" className="py-2 bg-primary rounded-lg w-full">
+			<button
+				type="button"
+				className="w-full py-2 rounded-lg bg-primary"
+				onClick={() => navigate("/landing-page")}
+			>
 				Mulai
 			</button>
 		</div>
