@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { func } from "prop-types";
 import { node, oneOf, string } from "prop-types";
 
 export default function ThemedButton({
@@ -7,6 +8,7 @@ export default function ThemedButton({
 	children,
 	className = "",
 	type = "primary",
+	onClick = () => {},
 }) {
 	const baseStyle =
 		"w-full h-full flex py-4 button rounded-lg items-center justify-center";
@@ -20,7 +22,7 @@ export default function ThemedButton({
 	);
 
 	return (
-		<button type="button" className={buttonStyles}>
+		<button type="button" className={buttonStyles} onClick={onClick}>
 			<img src={src} alt={alt} className="pr-3" />
 			{children}
 		</button>
@@ -33,4 +35,5 @@ ThemedButton.propTypes = {
 	className: string,
 	children: node.isRequired,
 	type: oneOf(["primary", "secondary"]),
+	onClick: func.isRequired,
 };

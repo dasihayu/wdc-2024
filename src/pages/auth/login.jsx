@@ -1,18 +1,16 @@
-import { Link, useNavigate } from "react-router";
+import { Link } from "react-router";
 import FormInput from "../../components/FormInput.jsx";
 import ThemedButton from "../../components/ThemedButton.jsx";
 
 export default function RegisterPage() {
-	const navigate = useNavigate();
-
 	return (
 		<main className="flex flex-col w-full min-h-screen bg-primary">
 			<h1 className="text-center py-9 text-neutral-secondary h1 px-9">
-				Selamat datang Pasukan Kebersihan
+				Ayo, lanjutkan misi kebersihanmu!
 			</h1>
 			<section className="flex-1 p-12 bg-white rounded-t-3xl">
 				<ThemedButton src="/google.png" alt="Google Icon" type="secondary">
-					Daftar dengan Google
+					Lanjutkan dengan Google
 				</ThemedButton>
 				<ThemedButton
 					src="/Facebook.png"
@@ -20,7 +18,7 @@ export default function RegisterPage() {
 					className="mt-3 mb-6"
 					type="secondary"
 				>
-					Daftar dengan Facebook
+					Lanjutkan dengan Facebook
 				</ThemedButton>
 				<div className="flex flex-row items-center justify-center space-x-5">
 					<div className="w-full border border-grey" />
@@ -49,14 +47,12 @@ export default function RegisterPage() {
 							Lupa Password?
 						</Link>
 					</div>
-					<ThemedButton className="h-12" onClick={() => navigate("/otp")}>
-						Daftar
-					</ThemedButton>
+					<ThemedButton className="h-12">Masuk</ThemedButton>
 					<div>
 						<p className="text-center text-grey">
-							Sudah punya akun?{" "}
-							<Link to="/login" className="text-primary">
-								Masuk
+							Belum punya akun?{" "}
+							<Link to="/register" className="text-primary">
+								Daftar
 							</Link>
 						</p>
 					</div>
