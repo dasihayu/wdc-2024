@@ -8,6 +8,7 @@ import RegisterPage from "./pages/auth/register.jsx";
 import LandingPage from "./pages/landing-page.jsx";
 import NotFoundPage from "./pages/not-found.jsx";
 import ProfilePage from "./pages/profile.jsx";
+import ThankYouPage from "./pages/thank-you.jsx";
 
 const root = document.getElementById("root");
 
@@ -20,6 +21,7 @@ createRoot(root).render(
 			<Route path="/login" element={<LoginPage />} />
 			<Route path="/otp" element={<OTPPage />} />
 			<Route path="/profile" element={<ProfilePage />} />
+			<Route path="/thank-you" element={<ThankYouPage />} />
 			<Route path="*" component={NotFoundPage} />
 		</Routes>
 	</BrowserRouter>,
