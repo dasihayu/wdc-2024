@@ -1,55 +1,73 @@
-import { Link } from "react-router";
-import FormInput from "../../components/FormInput.jsx";
+import { useCallback, useRef, useState } from "react";
+import { useNavigate } from "react-router";
 import ThemedButton from "../../components/ThemedButton.jsx";
 
 export default function OTPPage() {
+	const [otp, setOtp] = useState(["", "", "", ""]);
+	const inputs = useRef([]);
+	const navigate = useNavigate();
+	const setRef = useCallback(
+		(index) => (element) => {
+			inputs.current[index] = element;
+		},
+		[],
+	);
+
+	const handleChange = (element, index) => {
+		if (Number.isNaN(element.value)) {
+			return false;
+		}
+
+		setOtp([...otp.map((d, idx) => (idx === index ? element.value : d))]);
+
+		// Focus next input
+		if (element.value !== "" && index < 3) {
+			inputs.current[index + 1].focus();
+		}
+	};
+
+	const handleBackspace = (e, index) => {
+		// Focus previous input on backspace
+		if (e.key === "Backspace" && index > 0 && otp[index] === "") {
+			inputs.current[index - 1].focus();
+		}
+	};
+
 	return (
-		<main className="flex flex-col w-full min-h-screen bg-primary">
-			<h1 className="text-center py-9 text-neutral-secondary h1 px-9">
+		<main className="flex flex-col w-full h-screen bg-primary">
+			<h1 className="flex items-center justify-center flex-1 text-center py-9 text-neutral-secondary h1">
 				Kami perlu konfirmasi
 			</h1>
 			<section className="flex-1 p-12 bg-white rounded-t-3xl">
 				<h2 className="text-center text-black h5">Verifikasi Akun</h2>
-				<p className="text-center text-black body-medium">
+				<p className="pt-6 pb-8 text-center text-black body-medium">
 					Kami membutuhkan kode OTP dari Email anda sebelum memulai !
 				</p>
-				<div className="flex flex-row items-center justify-center space-x-5">
-					<div className="w-full border border-grey" />
-					<p className="text-grey">Atau</p>
-					<div className="w-full border border-grey" />
+				<div className="flex flex-col gap-4">
+					<label className="text-black body-medium">Kode OTP</label>
+					<div className="flex justify-between gap-4">
+						{otp.map((digit, index) => (
+							<input
+								key={index}
+								type="text"
+								maxLength="1"
+								ref={setRef(index)}
+								value={digit}
+								onChange={(e) => handleChange(e.target, index)}
+								onKeyDown={(e) => handleBackspace(e, index)}
+								className="w-16 h-12 text-lg font-semibold text-center border rounded-lg border-neutral-300 focus:border-primary focus:outline-none"
+							/>
+						))}
+					</div>
 				</div>
-				<form className="flex flex-col mt-6 space-y-4">
-					<FormInput
-						label="Email"
-						type="email"
-						placeholder="example@domain.com"
-					/>
-					<FormInput
-						label="Password"
-						type="password"
-						placeholder="Harus lebih dari 8 karakter"
-					/>
-					<div className="flex items-center justify-between">
-						<form className="flex items-center space-x-2">
-							<input type="checkbox" id="remember" />
-							<label htmlFor="remember" className="text-grey">
-								Ingat saya
-							</label>
-						</form>
-						<Link to="/change-password" className="text-primary">
-							Lupa Password?
-						</Link>
-					</div>
-					<ThemedButton className="h-12">Daftar</ThemedButton>
-					<div>
-						<p className="text-center text-grey">
-							Belum punya akun?{" "}
-							<Link to="/register" className="text-primary">
-								Daftar
-							</Link>
-						</p>
-					</div>
-				</form>
+				<div className="mt-8">
+					<ThemedButton
+						className="w-full h-12"
+						onClick={() => navigate("/profile")}
+					>
+						Konfirmasi
+					</ThemedButton>
+				</div>
 			</section>
 		</main>
 	);
