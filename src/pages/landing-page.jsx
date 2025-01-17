@@ -36,18 +36,18 @@ export default function LandingPage() {
 					<h1 className="py-5 text-2xl font-semibold text-center px-14 text-neutral-primary">
 						Lindungi Bumi, Mulai dari Langkah Kecil Anda!
 					</h1>
-					<section className="px-8 py-8 bg-white rounded-t-[32px]">
+					<section className="px-8 py-8 bg-white rounded-t-[32px] lg:w-full lg: flex flex-col items-center">
 						<h2 className="mb-4 text-xl font-semibold text-center text-green-secondary">
 							Laporkan Isu lingkungan yang ada disekitar
 						</h2>
-						<p className="text-sm font-medium text-center">
+						<p className="text-sm font-medium text-center lg: max-w-96">
 							Kami merancang website ini untuk memudahkan Anda melaporkan
 							berbagai isu lingkungan yang terjadi di sekitar, terutama terkait
 							permasalahan sampah. Ayo laporkan sekarang isu dilingkungan anda
 						</p>
 						<LandingForm />
 					</section>
-					<section className="flex flex-col items-center justify-center bg-secondary">
+					<section className="flex flex-col items-center justify-center bg-secondary lg:w-full">
 						<div className="px-8 py-8 text-neutral-primary">
 							<h2 className="mb-4 text-xl font-semibold text-center">
 								Jelajahi pengetahuan bersama <br />
