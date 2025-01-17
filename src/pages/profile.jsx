@@ -146,6 +146,7 @@ export default function ProfilePage() {
 					<button
 						type="submit"
 						className="h-12 mt-4 text-white transition-colors rounded-lg bg-primary hover:bg-primary-dark"
+						onClick={() => alert("Data berhasil disimpan")}
 					>
 						Simpan
 					</button>

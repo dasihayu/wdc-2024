@@ -155,9 +155,14 @@ export default function LandingPage() {
 				</div>
 				<footer className="p-8 text-white bg-green-700">
 					<div className="flex items-center justify-between mb-8">
-						<div className="mb-4">
+						<a
+							className="mb-4"
+							href="https://www.figma.com/design/BzhTict2gxHKRuPYdXXAyu/WD-ITC-Sabuk?node-id=596-6002&m=dev"
+							target="_blank"
+							rel="noreferrer"
+						>
 							<img src="/resources/figma.svg" alt="" />
-						</div>
+						</a>
 						<div className="flex gap-4">
 							<Link to="#" className="text-white hover:opacity-80">
 								<img src="/resources/X.svg" alt="" />

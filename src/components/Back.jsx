@@ -8,7 +8,7 @@ export default function Back({ onClick = () => {}, name = "" }) {
 			className="flex items-center px-4 py-2 text-white rounded-md bg-primary"
 			onClick={onClick}
 		>
-			<img src="/arrow-left.svg" alt="Button Back" className="pr-2" />
+			<img src="/icons/arrow-left.svg" alt="Button Back" className="pr-2" />
 			{name}
 		</button>
 	);
