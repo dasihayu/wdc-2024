@@ -89,3 +89,43 @@ export const TESTI_CARD = [
 			"Layanan ini sungguh membantu! Eco-voice membuat kami sadar betapa pentingnya menjaga sungai tetap bersih.",
 	},
 ];
+
+export const activities = [
+	{
+		id: 0,
+		image: "/activity/ambil-sampah.png",
+		title: "Bersih - bersih bersama pandhu group",
+		date: "Minggu, 12 Desember 2024",
+		location: "Pantai Ngebum, Kendal",
+	},
+	{
+		id: 1,
+		image: "/activity/bersih-bersih-bersama-petani.png",
+		title: "Donasi ikut jadi pejuang kebersihan remaja indonesia",
+		organization: "Eco-Voice Foundation",
+		date: "Rabu, 01 Januari 2025",
+		location: "Pantai Ancol, Jakarta",
+	},
+	{
+		id: 2,
+		image: "/activity/bersih-bersih-taman.png",
+		title: "Pohon - pohon hijau untuk masa depan",
+		organization: "PT. Pandu Grup",
+		date: "Kamis, 06 Februari 2025",
+		location: "Taman Sriranda, Salatiga",
+	},
+	{
+		id: 3,
+		image: "/activity/bersih-sungai-bersama-pandawara.png",
+		title: "Bersih - bersih bersama pandhu grup dan pemkot",
+		date: "Senin, 18 Juni 2025",
+		location: "Taman Pandanara, Semarang",
+	},
+	{
+		id: 4,
+		image: "/activity/photo-bareng.png",
+		title: "#TeamFotrest ayo jaga hutan kita",
+		date: "Minggu, 16 November 2025",
+		location: "Pantai Marina, Semarang",
+	},
+];

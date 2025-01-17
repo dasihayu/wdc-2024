@@ -2,6 +2,7 @@ import { createRoot } from "react-dom/client";
 import App from "./pages/App.jsx";
 import "./index.css";
 import { BrowserRouter, Route, Routes } from "react-router";
+import ActivityList from "./pages/activity.jsx";
 import LoginPage from "./pages/auth/login.jsx";
 import OTPPage from "./pages/auth/otp.jsx";
 import RegisterPage from "./pages/auth/register.jsx";
@@ -22,7 +23,8 @@ createRoot(root).render(
 			<Route path="/otp" element={<OTPPage />} />
 			<Route path="/profile" element={<ProfilePage />} />
 			<Route path="/thank-you" element={<ThankYouPage />} />
-			<Route path="*" component={NotFoundPage} />
+			<Route path="/activity" element={<ActivityList />} />
+			<Route path="*" element={<NotFoundPage />} />
 		</Routes>
 	</BrowserRouter>,
 );

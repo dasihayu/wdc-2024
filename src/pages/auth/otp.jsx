@@ -63,7 +63,7 @@ export default function OTPPage() {
 				<div className="mt-8">
 					<ThemedButton
 						className="w-full h-12"
-						onClick={() => navigate("/profile")}
+						onClick={() => navigate("/activity")}
 					>
 						Konfirmasi
 					</ThemedButton>
